@@ -1,0 +1,12 @@
+{
+  "name": "dotnet-prometheus",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "postCreateCommand": "dotnet restore",
+  "forwardPorts": [5000],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  }
+}
